@@ -8,3 +8,5 @@ const buyCakes = () =>{
     type:Buy_Cakes
   }
 }
+
+export default buyCakes;

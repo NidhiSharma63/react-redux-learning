@@ -1,5 +1,6 @@
 
 import React from 'react';
+import './App.css'
 import CakeContainer from './components/CakeContainer';
 
 const App = () => {

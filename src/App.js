@@ -1,6 +1,7 @@
 
 const BUY_CAKE= "BUY_CAKE";
 
+// action-creator
 const buyCake = () =>{
   return{
     type:BUY_CAKE,
@@ -8,13 +9,27 @@ const buyCake = () =>{
   }
 }
 
+// Initial state
+
+const initialState={  
+  noOfCake:10
+}
+
 
 function App() {
-  return (
-    <div className="App">
-      <h1>hello world</h1>
-    </div>
-  );
+
+  const reducers = (state=initialState,action)=>{
+    switch(action.type){
+      case BUY_CAKE: return{
+        ...state, /* make a copy of STATE and update the define property */
+        noOfCake:state.noOfCake-1
+      }
+      default: return state
+    }
+  }
+
+
+  return;
 }
 
 export default App;

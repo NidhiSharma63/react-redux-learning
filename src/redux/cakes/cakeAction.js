@@ -1,12 +1,17 @@
 
-import { Buy_Cakes } from "./cakesType"
+import { Buy_Cakes,ADD_CAKES } from "./cakesType";
 
 // action-creater
 
-const buyCakes = () =>{
+export const buyCakes = () =>{
   return{
     type:Buy_Cakes
   }
-}
+};
 
-export default buyCakes;
+export const addCakes = (quantity) =>{
+  return{
+    type:ADD_CAKES,
+    payload:quantity
+  }
+}

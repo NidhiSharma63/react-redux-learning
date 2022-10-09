@@ -1,4 +1,4 @@
-import {Buy_Cakes} from './cakesType'
+import { Buy_Cakes,ADD_CAKES} from './cakesType'
 
 const initialState = {
   numOfCakes:10,
@@ -19,6 +19,12 @@ const reducer = (state=initialState,action) =>{
           ...state,
           numOfCakes:state.numOfCakes-1,
         }
+      }
+    }
+    case ADD_CAKES:{
+      return{
+        ...state,
+        numOfCakes:state.numOfCakes+action.payload
       }
     }
     default: return state
